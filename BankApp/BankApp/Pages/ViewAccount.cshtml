@@ -1,0 +1,40 @@
+﻿@page
+@model ViewAccount
+@{
+    ViewData["Title"] = "View Account";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-page="/AccountManagment/CreateAccount">Create Account</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].Balance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.BankAccount)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Balance)
+                </td>
+                <td>
+                    <a asp-page="./AccountManagment/TransferBalance" asp-route-id="@item.Id">Transfer Balance</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

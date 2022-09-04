@@ -1,0 +1,25 @@
+﻿@page
+@model BankApp.Pages.AccountManagment.TransferBalanceModel
+@{
+    ViewData["Title"] = "Transfer Balance";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>BankAccount</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BankAccount.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BankAccount.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BankAccount.Balance)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BankAccount.Balance)
+        </dd>
+    </dl>
+</div>
