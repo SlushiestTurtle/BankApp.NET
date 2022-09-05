@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 
 namespace BankApp.Models
@@ -11,6 +12,6 @@ namespace BankApp.Models
         public string? Name { get; set; }
         [Required, NotNull]
         public float Balance { get; set; }
-        public Person? Person { get; set; }
+        public IdentityUser? Person { get; set; }
     }
 }

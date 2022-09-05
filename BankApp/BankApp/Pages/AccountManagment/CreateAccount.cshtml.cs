@@ -15,46 +15,43 @@ namespace BankApp.Pages.AccountManagment
     public class CreateAccountModel : PageModel
     {
         private readonly ApplicationDbContext _context;
-        private readonly IHttpContextAccessor _contextAccessor;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public CreateAccountModel(ApplicationDbContext context, IHttpContextAccessor contextAccessor, UserManager<IdentityUser> userManager)
+        public CreateAccountModel(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
-            _contextAccessor = contextAccessor;
             _userManager = userManager;
         }
 
-        public IActionResult OnGet()
+        [BindProperty(SupportsGet = true)]
+        public string? Email { get; set; }
+
+        public IdentityUser? Person { get; set; }
+
+        public async Task<IActionResult> OnPostAsynce()
         {
-            return Page(); 
+            Person = await _userManager.FindByEmailAsync(Email);
+
+            return Page();
         }
 
         [BindProperty]
         public BankAccount BankAccount { get; set; } = default!;
-        
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.BankAccount == null || BankAccount == null)
+            BankAccount.Person = Person;         
+
+            if (!ModelState.IsValid || _context.BankAccount == null || BankAccount == null)
             {
                 return Page();
             }
 
-            string findUserId = _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var user = _userManager.FindByIdAsync(findUserId);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-            BankAccount.Person.Equals(user);
-
             _context.BankAccount.Add(BankAccount);
-            await _context.SaveChangesAsync();
+          await _context.SaveChangesAsync();
 
-            return RedirectToPage("./ViewAccount");
+          return RedirectToPage("./ViewAccount");
         }
     }
 }

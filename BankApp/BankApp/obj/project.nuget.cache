@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Gpl+C7SdM0ThtVhupAaA7QmNhz2mql83QsnrgbntJjHiYE9l9s7Vl/HGzhsxWA6xRZkbKS99CHnEcTtw5305Hw==",
+  "dgSpecHash": "Zv0VfSyOK6el1cPQD79VSJ0ekXPltJPMAOQSuXIOeDSjbCa+Pg8OKj0asOrl+eAyvpsrwnG2GvrwTV5PXhrorQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\tony_\\Documents\\GitHub\\BankApp.NET\\BankApp\\BankApp\\BankApp.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,8 @@
     "C:\\Users\\tony_\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.0.0\\microsoft.codeanalysis.workspaces.common.4.0.0.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\microsoft.codeanalysis.workspaces.msbuild\\4.0.0\\microsoft.codeanalysis.workspaces.msbuild.4.0.0.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\tony_\\.nuget\\packages\\microsoft.data.edm\\5.8.5\\microsoft.data.edm.5.8.5.nupkg.sha512",
+    "C:\\Users\\tony_\\.nuget\\packages\\microsoft.data.odata\\5.8.5\\microsoft.data.odata.5.8.5.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\microsoft.diasymreader\\1.3.0\\microsoft.diasymreader.1.3.0.nupkg.sha512",
@@ -171,6 +173,7 @@
     "C:\\Users\\tony_\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.3.0\\system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\tony_\\.nuget\\packages\\system.spatial\\5.8.5\\system.spatial.5.8.5.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\tony_\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
